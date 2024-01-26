@@ -34,9 +34,11 @@ export default function Column({id, name, cards, setCards }: ColumnProps) {
             list={cards} 
             setList= {cards => setCardsForColumn(cards, id)}
             group="cards"
+            className="min-h-12"
+            ghostClass="opacity-40"
             >
             {cards.map(card => (
-                <div className="border my-2 p-4 rounded-md">
+                <div key={card.id} className="border  bg-white my-2 p-4 rounded-md">
                     <span>{card.name}</span>
                 </div>
             ))}

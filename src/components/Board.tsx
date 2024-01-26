@@ -30,6 +30,7 @@ export default function Board() {
         <div className="flex gap-4">
             {columns.map(column => (
                 <Column
+                    key={column.id}
                     {...column}
                     setCards={setCards}
                     cards={cards
