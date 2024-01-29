@@ -1,8 +1,13 @@
 'use client'
+
+import { signIn } from "next-auth/react"
+
 export default function LoginView(){
     return(
         <div className="w-full pt-8 text-center">
-            <button type="button" className="primary">Login</button>
+            <button
+            onClick={() => signIn('google')}
+            type="button" className="primary">Login</button>
         </div>
     )
 }
