@@ -1,6 +1,7 @@
 import { authOptions } from "@/lib/authOptions"
 import { getServerSession } from "next-auth"
 import LogoutButton from "./LogoutButton"
+import LoginButton from "./LoginButton";
 
 export default async function Header(){
     const session = await getServerSession(authOptions)
@@ -13,6 +14,12 @@ export default async function Header(){
                     <>
                     Hello, {session.user?.name}
                     <LogoutButton />
+                    </>
+                    )}
+                    {!session && (
+                    <>
+                    Not Logged In!
+                    <LoginButton />
                     </>
                     )}
                 </div>
