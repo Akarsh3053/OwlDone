@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { signOut } from "next-auth/react"
 import { faRightFromBracket } from "@fortawesome/free-solid-svg-icons"
