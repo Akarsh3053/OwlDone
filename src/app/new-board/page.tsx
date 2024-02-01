@@ -14,7 +14,7 @@ export default function NewBoardPage(){
         <div>
             <form action={newBoard} className="max-w-xs block">
                 <h1 className="text-2xl mb-4">Create new board</h1>
-                <input type="text" name="title" placeholder="Board tile"/>
+                <input type="text" name="title" placeholder="Board title"/>
                 <button type="submit" className="mt-2">Create Board</button>
             </form>
         </div>

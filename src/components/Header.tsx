@@ -1,6 +1,6 @@
-import { authOptions } from "@/lib/authOptions"
-import { getServerSession } from "next-auth"
-import LogoutButton from "./LogoutButton"
+import { authOptions } from "@/lib/authOptions";
+import { getServerSession } from "next-auth";
+import LogoutButton from "./LogoutButton";
 import LoginButton from "./LoginButton";
 
 export default async function Header(){
