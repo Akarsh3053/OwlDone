@@ -7,7 +7,7 @@ type ColumnProps = {
     name: string;
     cards: CardType[];
     setCards: SetStateAction<any>;
-}
+};
 
 
 export default function Column({id, name, cards, setCards }: ColumnProps) {

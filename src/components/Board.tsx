@@ -1,5 +1,5 @@
 'use client';
-import { use, useState } from "react";
+import { useState } from "react";
 import Column from "./Column";
 import NewColumnForm from "./forms/NewColumnForm";
 

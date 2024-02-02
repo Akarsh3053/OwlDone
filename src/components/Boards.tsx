@@ -1,7 +1,7 @@
-'use server'
+'use server';
 
 import { liveblocksClient } from "@/lib/liveblocksClient";
-import { getUserEmail } from "@/lib/userClient"
+import { getUserEmail } from "@/lib/userClient";
 import Link from "next/link";
 
 
