@@ -1,13 +1,16 @@
 'use client';
-import { redirect } from "next/navigation";
 import createBoard from "../actions/boardActions";
+import { redirect } from "next/navigation";
 
 export default function NewBoardPage(){
 
     async function newBoard(formData: FormData){
         const boardTitle = formData.get('title')?.toString() || '';
-        const {id} = await createBoard(boardTitle);
-        redirect(`/boards/${id}`)
+        const roomInfo = await createBoard(boardTitle);
+        if (roomInfo) {
+            //@ts-ignore
+            redirect(`/boards/${roomInfo.id}`);
+        }
     };
 
     return(
