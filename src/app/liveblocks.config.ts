@@ -1,4 +1,4 @@
-import { createClient } from "@liveblocks/client";
+import { LiveList, LiveObject, createClient } from "@liveblocks/client";
 import { createRoomContext } from "@liveblocks/react";
 
 const client = createClient({
@@ -12,10 +12,14 @@ type Presence = {
   // ...
 };
 
+type Column = {
+  name: string;
+  id: string;
+  index: number;
+};
 
 type Storage = {
-  // animals: LiveList<string>,
-  // ...
+  columns: LiveList<LiveObject<Column>>;
 };
 
 
@@ -23,6 +27,8 @@ export const {
   RoomProvider,
   useMyPresence,
   useStorage,
+  useMutation,
+  useRoom,
 } = createRoomContext<
   Presence,
   Storage
