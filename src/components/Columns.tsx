@@ -14,8 +14,7 @@ export default function Columns(){
                 <Column
                     key={column.id}
                     {...column}
-                    setCards={() => {}}
-                    cards={[]} />
+                    />
                 ))}
                 <NewColumnForm />
         </div>

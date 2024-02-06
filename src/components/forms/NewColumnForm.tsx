@@ -10,7 +10,7 @@ export default function NewColumnForm(){
         return storage.get('columns').push(new LiveObject({
                 name: columnName,
                 id: uniqid.time(),
-                index: 0,
+                index: 9999,
             }));
 
     }, []);
