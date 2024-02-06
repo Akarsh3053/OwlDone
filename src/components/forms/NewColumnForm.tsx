@@ -1,5 +1,4 @@
 'use client';
-
 import { useMutation } from "@/app/liveblocks.config";
 import { LiveObject } from "@liveblocks/client";
 import { FormEvent } from "react";
@@ -15,7 +14,6 @@ export default function NewColumnForm(){
             }));
 
     }, []);
-
 
     
     function handleNewColumn(ev: FormEvent){
