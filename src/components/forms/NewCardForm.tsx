@@ -5,7 +5,7 @@ import { LiveObject } from "@liveblocks/client";
 import { FormEvent } from "react";
 import uniqid from "uniqid"
 
-export default function NewCardForm({columnId}){
+export default function NewCardForm({columnId}: {columnId: string}){
 
     const addCard = useMutation(({storage}, cardTitle) => {
         return storage.get('cards').push(new LiveObject<Card>({
