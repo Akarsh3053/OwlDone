@@ -1,22 +1,41 @@
 'use client';
-import { useStorage } from "@/app/liveblocks.config";
-import Column from "./Column";
+import { Column, useMutation, useStorage } from "@/app/liveblocks.config";
 import NewColumnForm from "./forms/NewColumnForm";
+import { shallow } from "@liveblocks/client";
+import { ReactSortable } from "react-sortablejs";
+import {default as BoardColumn} from './Column'
 
 export default function Columns(){
-    const columns = useStorage(root => root.columns);
+    const columns = useStorage(root => root.columns.map(c => ({...c})), shallow);
+    
+    const updateColumns = useMutation(({storage}, columns) => {
+
+    },[]);
+    
+    function setColumnsOrder(columns: Column[]){
+        const newColumns = [];
+    }
+    
     if (!columns){
         return;
     }
+
     return(
         <div className="flex gap-4">
-            {columns.map(column => (
-                <Column
+            <ReactSortable 
+            group={'board-column'}
+            list={columns}
+            className="flex gap-4"
+            ghostClass="opacity-40" 
+            setList={setColumnsOrder}>
+            {columns?.length > 0 && columns.map(column => (
+                <BoardColumn
                     key={column.id}
                     {...column}
                     />
                 ))}
-                <NewColumnForm />
+            </ReactSortable>
+            <NewColumnForm />
         </div>
     );
 }
