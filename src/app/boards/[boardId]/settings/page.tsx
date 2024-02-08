@@ -16,12 +16,14 @@ export default async function BoardSettings({params}: PageProps){
     return(
         <div>
             <h1 className="text-2xl">Board users:</h1>
-            {Object.keys(boardInfo.usersAccesses).map(email => (
-                <div>
-                    {email}
-                </div>
-            ))}
-            <AddNewUser />
+            <div className="mb-8">
+                {Object.keys(boardInfo.usersAccesses).map(email => (
+                    <div>
+                        {email}
+                    </div>
+                ))}
+            </div>
+            <AddNewUser boardId={boardId} />
         </div>
     )
 }

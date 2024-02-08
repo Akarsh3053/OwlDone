@@ -1,5 +1,6 @@
 'use server';
 import { authOptions } from "@/lib/authOptions";
+import { liveblocksClient } from "@/lib/liveblocksClient";
 import { Liveblocks, RoomInfo } from "@liveblocks/node";
 import { getServerSession } from "next-auth";
 import uniqid from 'uniqid';
@@ -25,3 +26,12 @@ export default async function createBoard(title: string) : Promise<boolean | Roo
     }
     return false;
 }
+
+export async function addBoardUserAccess(boardId:string, email:string){
+    const room = await liveblocksClient.getRoom(boardId);
+    const usersAccesses = room.usersAccesses;
+    usersAccesses[email] = ['room:write'];
+    liveblocksClient.updateRoom(boardId, {usersAccesses});
+    return true
+
+} 
