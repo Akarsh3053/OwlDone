@@ -1,5 +1,6 @@
 'use server';
 
+import UserList from "@/components/UserList";
 import AddNewUser from "@/components/forms/AddNewUserForm";
 import { liveblocksClient } from "@/lib/liveblocksClient";
 import { getUserEmail } from "@/lib/userClient";
@@ -33,11 +34,7 @@ export default async function BoardSettings({params}: PageProps){
             </Link>
             <h1 className="text-2xl">Board users:</h1>
             <div className="mb-8">
-                {Object.keys(boardInfo.usersAccesses).map(email => (
-                    <div>
-                        {email}
-                    </div>
-                ))}
+                <UserList emails={Object.keys(boardInfo.usersAccesses)} />
             </div>
             <AddNewUser boardId={boardId} />
         </div>
