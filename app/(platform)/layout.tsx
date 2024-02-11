@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs"
 
 const PlatformLayout = (
-    {children}:{children: React.ReactNode}) => {
+    {children}:{children: React.ReactNode;}) => {
         return(
             <ClerkProvider>
                 {children}
