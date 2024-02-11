@@ -34,7 +34,7 @@ const LandinPage = () => {
             </div>
             <Button className="mt-6" size="lg" asChild>
                 <Link href="/sign-up">
-                    Get OwlDone now
+                    Get Started
                 </Link>
             </Button>
         </div>
