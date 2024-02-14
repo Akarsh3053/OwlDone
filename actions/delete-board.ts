@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import { db } from "@/lib/db";
 
-export async function deleteBoard(id: string) {
+export async function DeleteBoard(id: string) {
     await db.board.delete({
         where: {
             id
