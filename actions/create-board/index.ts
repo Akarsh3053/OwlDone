@@ -24,12 +24,12 @@ const handler = async (data: InputType): Promise<ReturnType> => {
   try {
     board = await db.board.create({
         data: {
-            title,
+          title,
         }
     });
   } catch (error) {
     return {
-        error: "Failed to create board."
+      error: "Failed to create board."
     }
   }
 
