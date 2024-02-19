@@ -11,6 +11,7 @@ import { Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover"
 import { FormInput } from "./form-input";
 import { FormSubmit } from "./form-submit";
 import { PopoverClose } from "@radix-ui/react-popover";
+import { FormPicker } from "./form-picker";
 
 
 interface FormPopoverProps {
@@ -66,7 +67,7 @@ export const FormPopover = ({
                 </PopoverClose>
                 <form action={onSubmit} className="space-y-4">
                     <div className="space-y-4">
-                        {/* <FormPicker id="image" errors={fieldErrors}/> */}
+                        <FormPicker id="image" errors={fieldErrors}/>
                         <FormInput id="title" label="Board title" type="text" errors={fieldErrors}/>
                     </div>
                     <FormSubmit className="w-full">
