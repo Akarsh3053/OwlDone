@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { unsplash } from "@/lib/unsplash";
-// import { defaultImages } from "@/constants/images";
+import { defaultImages } from "@/constants/images";
 
 import { FormErrors } from "./form-errors";
 
@@ -27,6 +27,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
     useEffect(() =>{
         const fetchImages = async () => {
             try{
+                throw new Error("jfh"); //this is to be removed later
                 const result = await unsplash.photos.getRandom({
                     collectionIds: ["317099"],
                     count: 9,
@@ -41,7 +42,7 @@ export const FormPicker = ({ id, errors }: FormPickerProps) => {
 
             } catch (error) {
                 console.log(error);
-                setImages([]);
+                setImages(defaultImages);
             } finally {
                 setIsLoading(false);
             }
