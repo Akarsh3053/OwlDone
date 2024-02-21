@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Separator } from "@/components/ui/separator";
 
 import { Info } from "./_components/info";
@@ -9,7 +10,9 @@ const WorkspaceIdPage = async () => {
             <Info />
             <Separator className="my-3" />
             <div>
-                <BoardList />
+                <Suspense fallback={<BoardList.Skeleton />}>
+                    <BoardList />
+                </Suspense>
             </div>
         </div>
     );
