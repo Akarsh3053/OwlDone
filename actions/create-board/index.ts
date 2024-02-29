@@ -7,6 +7,7 @@ import { auth } from "@clerk/nextjs";
 import { ACTION, ENTITY_TYPE } from "@prisma/client";
 import { createAuditLog } from "@/lib/create-audit-log";
 import { CreateSafeActions } from "@/lib/create-safe-actions";
+import { incrementAvailableCount, hasAvailableCount } from "@/lib/org-limit";
 
 import { CreateBoard } from "./schema";
 import { InputType, ReturnType } from "./types";
@@ -18,6 +19,14 @@ const handler = async (data: InputType): Promise<ReturnType> => {
     return {
       error: "Unauthorized Access",
     };
+  }
+
+  const canCreate = await hasAvailableCount();
+
+  if (!canCreate) {
+    return {
+      error: "You have reached your free board limit. Please upgrade to create more."
+    }
   }
 
   const { title, image } = data;
@@ -44,6 +53,8 @@ const handler = async (data: InputType): Promise<ReturnType> => {
           imageLinkHTML,
         }
     });
+
+    await incrementAvailableCount();
 
     await createAuditLog({
       entityTitle: board.title,

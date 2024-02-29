@@ -6,6 +6,8 @@ import { HelpCircle, ClipboardListIcon } from "lucide-react";
 import { db } from "@/lib/db";
 import { Hint } from "@/components/hint";
 import { Skeleton } from "@/components/ui/skeleton";
+import { getAvailableCount } from "@/lib/org-limit";
+import { MAX_FREE_BOARDS } from "@/constants/boards";
 import { FormPopover } from "@/components/form/form-popover";
 
 export const BoardList = async () => {
@@ -24,6 +26,7 @@ export const BoardList = async () => {
         }
     });
 
+    const availableBoards = await getAvailableCount();
 
     return(
         <div className="space-y-4">
@@ -40,7 +43,7 @@ export const BoardList = async () => {
                         style={{ backgroundImage: `url(${board.imageThumbUrl})` }}
                     >
                         <div className="absolute inset-0 bg-black/30 group-hover:bg-black/40 transition" />
-                        <p className="relative font-semibold text-white">
+                        <p className="relative capitalize font-semibold text-white">
                             {board.title}
                         </p>
                     </Link>
@@ -52,7 +55,7 @@ export const BoardList = async () => {
                 >
                     <p className="text-sm">Create new Board</p>
                     <span>
-                        5 remaining
+                        {`${MAX_FREE_BOARDS - availableBoards} remaining`}
                     </span>
                     <Hint
                         sideOffset={40}
