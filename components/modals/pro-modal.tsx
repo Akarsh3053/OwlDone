@@ -22,7 +22,8 @@ export const ProModal = () => {
   });
 
   const onClick = () => {
-    execute({});
+    // execute({});
+    toast.success("Coming Soon!!!")
   };
   
   return (
