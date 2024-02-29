@@ -7,13 +7,13 @@ import { useRouter } from "next/navigation";
 import { useAction } from "@/hooks/use-action";
 import { Button } from "@/components/ui/button";
 import { createBoard } from "@/actions/create-board";
-import { Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import { Popover, PopoverContent, PopoverTrigger, PopoverClose} from "@/components/ui/popover";
 
 
 import { FormInput } from "./form-input";
 import { FormSubmit } from "./form-submit";
-import { PopoverClose } from "@radix-ui/react-popover";
 import { FormPicker } from "./form-picker";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 
 interface FormPopoverProps {
@@ -30,6 +30,7 @@ export const FormPopover = ({
     sideOffset = 0,
 
 }: FormPopoverProps) => {
+    const proModal = useProModal();
     const router = useRouter();
     const closeRef = useRef<ElementRef<"button">>(null);
 
@@ -41,6 +42,9 @@ export const FormPopover = ({
         },
         onError: (error) => {
           toast.error(error);
+          if (error.includes("upgrade")) {
+            proModal.onOpen();
+          }
         }
     });
 
