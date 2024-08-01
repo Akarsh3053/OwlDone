@@ -21,7 +21,11 @@ To improve user experience OwlDone has several thoughtful features that make the
 
 # Screenshots
 
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUiCSBFKXi1w5tabth7noVfR3oK3IgTZS8RHIL_JFB15j2wsW-8oIQIudNPNRPvbjxTAe2tpxCYW9P8ArvEDWdzWKkdDakb6xAz2uirZK4_8o5AM0qJC34MrWoKpf1hAe1E1FN6JMA82f4k_ylLitru8q371t4I57m2S61-cxp_WbkDnD-ypOBGF0eMGc/s16000/Home.png"> <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy7al870ReO49K5WLXfdZh8e-T9M5RSVwp_N654Vt9_gxULDWd8tyaW07hBNgHL4ZJlPaOS0V1UwF3b9S-J8RHI_9XElKS9g_MWBi1Toz40wlP4NO3rhD5hGwBsJoitfCWKKHNOBXbUXxyakpqdF3JVtTz-m0QXZUI1NncAniN31XwoAIaXufrscnuQuY/s16000/Board.png">
+### Landing Page
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUiCSBFKXi1w5tabth7noVfR3oK3IgTZS8RHIL_JFB15j2wsW-8oIQIudNPNRPvbjxTAe2tpxCYW9P8ArvEDWdzWKkdDakb6xAz2uirZK4_8o5AM0qJC34MrWoKpf1hAe1E1FN6JMA82f4k_ylLitru8q371t4I57m2S61-cxp_WbkDnD-ypOBGF0eMGc/s16000/Home.png"> 
+
+### Task Board
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgy7al870ReO49K5WLXfdZh8e-T9M5RSVwp_N654Vt9_gxULDWd8tyaW07hBNgHL4ZJlPaOS0V1UwF3b9S-J8RHI_9XElKS9g_MWBi1Toz40wlP4NO3rhD5hGwBsJoitfCWKKHNOBXbUXxyakpqdF3JVtTz-m0QXZUI1NncAniN31XwoAIaXufrscnuQuY/s16000/Board.png">
 
 # Tech Used
 
