@@ -35,7 +35,7 @@ To improve user experience OwlDone has several thoughtful features that make the
 
 ### Here's how you can contribute to `OwlDone`
 
-To contribute spet up the local environment, develop and test your feature, or fix any existing bug. Once you are happy with your work, go ahead and raise a pull request, I'll be happy to merge any constructive change to the project, making it more awesome✌️.
+To contribute set up the local environment, develop and test your feature, or fix any existing bug. Once you are happy with your work, go ahead and raise a pull request, I'll be glad to merge any constructive change to the project, making it more awesome✌️.
 
 ### Setup:
 
@@ -79,6 +79,6 @@ prisma generate
 npm run dev
 ```
 
-### If everything goes well, the app will be runing at:
+### If everything goes well, the app will be running at:
 
 - <a href="http://localhost:3000">http://localhost:3000</a>
