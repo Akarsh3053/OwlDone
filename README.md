@@ -5,7 +5,7 @@
 
 # Description
 
-OwlDone is a next and react-based web app that can be used as a collaborative SAAS platform for project management and task planning. It uses modern UI based on ShadCN components and tailwind CSS. It uses Clerk for authentication, user management, and PostgreSQL as a database. It has Stripe as a payment gateway and Unsplash API for images. It is completely built upon Next server actions for all backend operations to make the UI snappy and improve user experience.
+OwlDone is a Next and React-based web app that can be used as a collaborative SAAS platform for project management and task planning. It uses a modern UI based on ShadCN components and tailwind CSS. It uses Clerk for authentication and user management and PostgreSQL as a database. It has Stripe as a payment gateway and Unsplash API for images. It is completely built upon Next server actions for all backend operations to make the UI snappy and improve user experience.
 
 # Features
 
